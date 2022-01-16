@@ -1,0 +1,19 @@
+//all test cases passed
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function(nums) {
+  
+    let result =nums[0]
+    let maxSub=nums[0]
+    
+    for(i=1;i< nums.length;i++){
+       maxSub= Math.max( maxSub+nums[i],nums[i]) 
+        result=Math.max(maxSub,result)
+        
+    }
+    return result
+     
+};
