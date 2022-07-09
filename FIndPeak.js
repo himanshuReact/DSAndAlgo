@@ -39,10 +39,10 @@ var findPeakElement = function(nums) {
         let mid = Math.floor(low + (high - low) / 2);
         console.log({mid})
         
-        if (nums[mid] > nums[mid + 1]) {
-            high = mid
+        if (nums[mid] < nums[mid + 1]) {
+             low = mid + 1;
         } else {
-            low = mid + 1;
+              high = mid
         }
     }
     
